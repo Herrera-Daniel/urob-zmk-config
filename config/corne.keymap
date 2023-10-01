@@ -64,8 +64,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             //                    | LWR | BKSP| CTRL|   | ENT | SPC | RSE |
 
             bindings = <
-&mt LG(LANGUAGE_6) TAB  &mt LG(NUMBER_5) Q  &mt LG(NUMBER_4) W  &mt LG(NUMBER_3) F  &mt LG(NUMBER_2) P  &mt LG(NUMBER_1) B    &mt LG(NUMBER_6) J   &kp L              &kp U        &kp Y            &kp SEMI         &kp LGUI
-&kp CAPS ESC           &hml LEFT_GUI A      &hml LEFT_ALT R      &hml LCTRL S         &hml LSHIFT T        &hml TAB G             &hmr TAB M            &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
+&kp TAB  &mt LG(NUMBER_5) Q  &mt LG(NUMBER_4) W  &mt LG(NUMBER_3) F  &mt LG(NUMBER_2) P  &mt LG(NUMBER_1) B    &mt LG(NUMBER_6) J   &kp L              &kp U        &kp Y            &kp SEMI         &trans
+&kp ESC           &hml LEFT_GUI A      &hml LEFT_ALT R      &hml LCTRL S         &hml LSHIFT T        &hml TAB G             &hmr TAB M            &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
 &kp LSHFT               &kp Z               &mt LC(X) X         &mt LC(C) C         &kp D               &mt LC(LS(V)) V       &mt K_APPLICATION K  &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
                                                                 &lt 3 HOME          &lt 2 BACKSPACE     &lt 1 DELETE          &lt 1 ENTER          &lt 2 SPACE        &lt 3 END
             >;
