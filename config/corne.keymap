@@ -24,9 +24,9 @@
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <280>;
+    tapping-term-ms = <250>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
-    global-quick-tap-ms = <150>;         // requires PR #1387
+    global-quick-tap-ms = <175>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
@@ -35,9 +35,9 @@ ZMK_BEHAVIOR(hml, hold_tap,
 /* right-hand HRMs */
 ZMK_BEHAVIOR(hmr, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <280>;
+    tapping-term-ms = <250>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
-    global-quick-tap-ms = <150>;         // requires PR #1387
+    global-quick-tap-ms = <175>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
@@ -64,10 +64,10 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             //            | HOME/3 | BKSP/2 | DEL/1 |   | ENT/1 | SPC/2 | END/3 |
 
             bindings = <
-&kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J               &kp L              &kp U        &kp Y            &kp SEMI         &trans
-&kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &hml TAB G          &hmr TAB M          &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr RIGHT_GUI O &kp SQT
-&kp LSHFT &kp Z           &mt LC(X) X     &mt LC(C) C  &kp D         &mt LC(LS(V)) V     &mt K_APPLICATION K &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
-                                &lt 3 HOME       &lt 2 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER         &lt 2 SPACE        &lt 3 END
+&kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
+&kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &hml TAB G          &hmr TAB M    &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr RIGHT_GUI O &kp SQT
+&kp LSHFT &kp Z           &kp X           &kp C        &kp D         &kp V               &kp K         &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
+                                &lt 3 HOME       &lt 2 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER   &lt 2 SPACE        &lt 3 END
             >;
         };
 
