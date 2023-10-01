@@ -46,15 +46,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* Nav cluster */
 
 // long-tap action on hold, short-tap action on all interrupts
-#define MT_CORE \
+&mt { 
     flavor = "tap-preferred"; \
     tapping-term-ms = <220>; \
     quick-tap-ms = <220>; \
     hold-trigger-key-positions = <0>;
-
-&mt { MT_CORE };
-ZMK_BEHAVIOR(mt_home, hold_tap, bindings = <&masked_home>, <&kp>; MT_CORE)
-ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
+};
 
 / {
     keymap {
