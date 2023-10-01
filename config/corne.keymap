@@ -58,13 +58,13 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // | TAB  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  ;  | GUI  |
+            // | TAB  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  ;  | NONE |
             // | ESC  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
             // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  | SHFT |
-            //                    | LWR | BKSP| CTRL|   | ENT | SPC | RSE |
+            //            | HOME/3 | BKSP/2 | DEL/1 |   | ENT/1 | SPC/2 | END/3 |
 
             bindings = <
-&kp TAB  &mt LG(NUMBER_5) Q  &mt LG(NUMBER_4) W  &mt LG(NUMBER_3) F  &mt LG(NUMBER_2) P  &mt LG(NUMBER_1) B    &mt LG(NUMBER_6) J   &kp L              &kp U        &kp Y            &kp SEMI         &trans
+&kp TAB  &kp Q  &kp W  &kp F  &kp P  &kp B    &kp J   &kp L              &kp U        &kp Y            &kp SEMI         &trans
 &kp ESC           &hml LEFT_GUI A      &hml LEFT_ALT R      &hml LCTRL S         &hml LSHIFT T        &hml TAB G             &hmr TAB M            &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
 &kp LSHFT               &kp Z               &mt LC(X) X         &mt LC(C) C         &kp D               &mt LC(LS(V)) V       &mt K_APPLICATION K  &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
                                                                 &lt 3 HOME          &lt 2 BACKSPACE     &lt 1 DELETE          &lt 1 ENTER          &lt 2 SPACE        &lt 3 END
@@ -73,31 +73,31 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
         nav_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  GUI |
-            // | HOME | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |  END |
-            // | SHFT |BTCLR|     |     |     |     |   |     |     |     |     |     |      |
-            //                    | ALT | DEL | BKSP|   | ENT | SPC | RALT |
+            // |  F1    |  F2 |  F3     |  F4       |  F5        |  F6       |   |  F7  |  F8  |  F9  |  F10  |  F11  |  F11 |
+            // | N_LOCK | INS | LA(INS) | GUI(LEFT) | GUI(RIGHT) | GUI(ENT)  |   | LFT  | DWN  |  UP  | RGT   |       |      |
+            // |        |     |         | GUI(UP)   | GUI(DOWN)  |           |   | WNDWLFT  |  WRKSPCLTF   |  WRKSPCRHT   |  WNDWRHT   |      |    |
+            //                                 |     |     |     |           |     |     |     |
 
             bindings = <
 &kp F1  &kp F2          &kp F3            &kp F4      &kp F5   &kp F6     &kp F7  &kp F8  &kp F9 &kp F10  &kp F11  &kp F12
 &kp KP_NUMLOCK  &kp INSERT         &kp LA(INSERT)            &kp LG(LEFT_ARROW)      &kp LG(RIGHT_ARROW)   &kp LG(ENTER)     &kp LEFT                &kp DOWN                &kp UP                   &kp RIGHT                &trans  &trans
-&trans          &trans  &trans  &trans  &kp LG(UP_ARROW)  &kp LG(DOWN_ARROW)    &kp LG(LS(LEFT_ARROW))      &kp LG(LC(LEFT_ARROW))      &kp LG(LC(RIGHT_ARROW))         &kp LG(LS(RIGHT_ARROW))      &trans  &trans
+&trans          &trans  &trans  &kp LG(UP_ARROW)  &kp LG(DOWN_ARROW)  &trans    &kp LG(LS(LEFT_ARROW))      &kp LG(LC(LEFT_ARROW))      &kp LG(LC(RIGHT_ARROW))         &kp LG(LS(RIGHT_ARROW))      &trans  &trans
                                                   &trans      &trans   &trans     &trans                  &trans                  &trans
             >;
         };
 
         symbol_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  GUI |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI | DEL | BKSP|   | ENT | SPC | ALT |
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  NONE|
+            // | CTRL |  !  |  @  |  #  |  $  |  %  |   |  =  |  {  |  }  |  [  |  ]  |  "|"   |
+            // | SHFT |  ~  |  `  |  *  |  &  |  ^  |   |  +  |  (  |  )  |  -  | _ |  \   |
+            //                    | NONE| DEL | BKSP|   | ENT | SPC | NONE|
 
             bindings = <
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &kp N7                &kp NUMBER_8           &kp NUMBER_9      &kp NUMBER_0       &trans
 &trans  &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR     &kp PRCNT       &kp EQUAL     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
-&trans  &kp GRAVE     &kp TILDE     &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER          &kp BACKSLASH
-                                    &trans        &kp DEL        &kp DEL         &kp RET       &kp SPACE             &trans
+&trans  &kp TILDE     &kp GRAVE     &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER          &kp BACKSLASH
+                                    &trans        &kp BACKSPACE        &kp DEL         &kp RET       &kp SPACE             &trans
             >;
         };
 
