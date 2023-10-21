@@ -61,7 +61,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             // | TAB  |  Q      |  W      |  F       |  P       |  B      |   |  J      |  L       |  Y       |  U      |  ;      |      |
             // | ESC  |  A/GUI  |  R/ALT  |  S/CTRL  |  T/SHFT  |  G/TAB  |   |  M/TAP  |  N/SHFT  |  E/CTRL  |  I/ALF  |  O/GUI  |  '   |
             // | SHFT |  Z      |  X      |  C       |  D/2     |  V      |   |  K      |  H/2       |  ,       |  .      |  /      | SHFT |
-            //                                 | HOME/4 | BKSPC/3 | DEL/1 |   | ENT/1 | SPC/3 | END/4 |
+            //                                 | HOME/5 | BKSPC/3 | DEL/1 |   | ENT/1 | SPC/3 | END/5 |
 
             bindings = <
 &kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
@@ -109,10 +109,25 @@ number_layer {
             //                          |     |     |       |    | BKSP |  0  |     |
 
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3      &kp F4    &kp F5           &kp C_NEXT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOLUME_UP  &trans
-&trans      &kp F10       &kp F9        &kp F8      &kp F7    &kp F6           &kp C_PLAY_PAUSE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOLUME_DOWN  &trans
-&trans      &trans        &trans        &trans      &kp F12   &kp F11          &kp C_PREV  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+&trans      &kp F1        &kp F2        &kp F3      &kp F4    &kp F5           &kp C_NEXT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&trans      &kp F10       &kp F9        &kp F8      &kp F7    &kp F6           &kp C_PLAY_PAUSE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &&kp C_VOLUME_UP  &trans
+&tog 4      &trans        &trans        &trans      &kp F12   &kp F11          &kp C_PREV  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_VOLUME_DOWN  &trans
                                     &trans        &trans        &trans         &kp BACKSPACE   &kp NUMBER_0  &trans
+            >;
+        };
+
+gaming_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |  T |  Q |  W | E  | R  |       | J |  L  |  U  |  Y  |    |  TOG_LYR   |
+            // |      |  G |  A |  S | D  | F  |       | M |  N  |  P  |  I  |    |     |
+            // |      |  Z |  X |  V | C  | B  |       | K |  H  |  <  |  ,  |    |     |
+            //       |  CTRL  |  SPC  |  SHFT  |       | ESC |  0  |     |
+
+            bindings = <
+&kp ESC      &kp T   &kp Q   &kp W  &kp E   &kp R          &kp J  &kp L  &kp U  &kp Y  &kp trans  &tog 4
+&kp TAB      &kp G   &kp A   &kp S  &kp D   &kp F          &kp M  &kp N  &kp P  &kp I  &kp O  &trans
+&kp LSHIFT   &kp Z   &kp X   &kp V  &kp C   &kp B          &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &trans
+              &kp LCTRL   &kp SPACE    &kp LSHIFT         &kp ESC   &trans  &trans
             >;
         };
 
