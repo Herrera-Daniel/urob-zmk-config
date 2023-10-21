@@ -119,14 +119,14 @@ number_layer {
 gaming_layer {
             // -----------------------------------------------------------------------------------------
             // |      |  T |  Q |  W | E  | R  |       | J |  L  |  U  |  Y  |    |  TOG_LYR   |
-            // |      |  G |  A |  S | D  | F  |       | M |  N  |  P  |  I  |    |     |
-            // |      |  Z |  X |  V | C  | B  |       | K |  H  |  <  |  ,  |    |     |
+            // |      |  G |  A |  S | D  | F  |       | M |  N  |  P  |  I  | O  |     |
+            // |      |  Z |  X |  V | C  | B  |       | K |  H  |  ,  |  .  | /  |     |
             //       |  CTRL  |  SPC  |  SHFT  |       | ESC |  0  |     |
 
             bindings = <
-&kp ESC      &kp T   &kp Q   &kp W  &kp E   &kp R          &kp J  &kp L  &kp U  &kp Y  &kp trans  &tog 4
-&kp TAB      &kp G   &kp A   &kp S  &kp D   &kp F          &kp M  &kp N  &kp P  &kp I  &kp O  &trans
-&kp LSHIFT   &kp Z   &kp X   &kp V  &kp C   &kp B          &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &trans
+&kp ESC      &kp T   &kp Q   &kp W  &kp E   &kp R          &kp J  &kp L  &kp U      &kp Y    &trans   &tog 4
+&kp TAB      &kp G   &kp A   &kp S  &kp D   &kp F          &kp M  &kp N  &kp P      &kp I    &kp O    &trans
+&kp LSHIFT   &kp Z   &kp X   &kp V  &kp C   &kp B          &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH &trans
               &kp LCTRL   &kp SPACE    &kp LSHIFT         &kp ESC   &trans  &trans
             >;
         };
