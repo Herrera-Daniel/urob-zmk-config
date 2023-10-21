@@ -79,7 +79,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             //                                 |     |     |     |         |   |     |     |
 
             bindings = <
-&trans  &trans     &trans         &kp LA(F8)         &kp LS(F6)          &kp LCTRL         &kp LS(LEFT_ARROW)     &kp LG(HOME)           &kp LG(END)             &kp LS(LEFT_ARROW)      &kp F11        &kp F12
+&trans  &trans     &trans         &kp LA(F8)         &kp LS(F6)          &kp LCTRL         &kp LS(RIGHT_ARROW)     &kp LG(HOME)           &kp LG(END)             &kp LS(LEFT_ARROW)      &kp F11        &kp F12
 &trans  &trans     &kp INSERT     &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &kp LSHIFT        &kp LEFT               &kp DOWN               &kp UP                  &kp RIGHT               &kp LG(ENTER)  &trans
 &trans  &trans     &trans         &kp LG(UP_ARROW)   &kp LG(DOWN_ARROW)  &kp LA(INSERT)    &kp LG(LS(LEFT_ARROW)) &kp LG(LC(LEFT_ARROW)) &kp LG(LC(RIGHT_ARROW)) &kp LG(LS(RIGHT_ARROW)) &trans         &trans
                                                   &trans      &trans   &trans              &trans    &trans       &trans
@@ -103,15 +103,15 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 number_layer {
             // -----------------------------------------------------------------------------------------
-            // |      |  F1 |  F2 |  F3 | F4  | F5  |       |    |  7  |  8  |  9  |    |     |
-            // |      | F10 |  F9 |  F8 | F7  | F6  |       |    |  4  |  5  |  6  |    |     |
-            // |      |     |     |     | F12 | F11 |       |    |  1  |  2  |  3  |    |     |
+            // |      |  F1 |  F2 |  F3 | F4  | F5  |       | NEXT    |  7  |  8  |  9  |  VUP   |     |
+            // |      | F10 |  F9 |  F8 | F7  | F6  |       | PLY/PSE |  4  |  5  |  6  | VDWN   |     |
+            // |      |     |     |     | F12 | F11 |       | PREV    |  1  |  2  |  3  |        |     |
             //                          |     |     |       |    | BKSP |  0  |     |
 
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3      &kp F4    &kp F5           &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
-&trans      &kp F10       &kp F9        &kp F8      &kp F7    &kp F6           &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans      &trans        &trans        &trans      &kp F12   &kp F11          &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+&trans      &kp F1        &kp F2        &kp F3      &kp F4    &kp F5           &kp C_NEXT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOLUME_UP  &trans
+&trans      &kp F10       &kp F9        &kp F8      &kp F7    &kp F6           &kp C_PLAY_PAUSE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOLUME_DOWN  &trans
+&trans      &trans        &trans        &trans      &kp F12   &kp F11          &kp C_PREV  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                                     &trans        &trans        &trans         &kp BACKSPACE   &kp NUMBER_0  &trans
             >;
         };
