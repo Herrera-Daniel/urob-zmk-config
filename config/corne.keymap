@@ -88,15 +88,15 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
         symbol_layer {
             // -----------------------------------------------------------------------------------------
-            // |      |     |     |  <  |  >  |  "  |   |  \  |  (  |  )  |  -  | "|" |     |
+            // | CAPS |     |     |  <  |  >  |  "  |   |  \  |  (  |  )  |  -  | "|" |     |
             // |      |  !  |  @  |  #  |  $  |  %  |   |  =  |  {  |  }  |  :  |  ;  |     |
             // |      |  ~  |  `  |  *  |  &  |  ^  |   |  +  |  [  |  ]  |  _  |     |     |
             //                    |     | BKSP | DEL|   | ENT | SPC |     |
 
             bindings = <
-&trans  &trans        &trans        &kp LT        &kp GT         &kp DQT         &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp PIPE   &trans
-&trans  &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR     &kp PRCNT       &kp EQUAL      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &kp SEMI   &trans
-&trans  &kp TILDE     &kp GRAVE     &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDER  &trans     &trans
+&kp CAPS &trans        &trans        &kp LT        &kp GT         &kp DQT         &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp PIPE   &trans
+&trans   &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR     &kp PRCNT       &kp EQUAL      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &kp SEMI   &trans
+&trans   &kp TILDE     &kp GRAVE     &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDER  &trans     &trans
                                     &trans        &kp BACKSPACE  &kp DEL         &kp RET        &kp SPACE             &trans
             >;
         };
