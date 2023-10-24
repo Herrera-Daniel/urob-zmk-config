@@ -42,7 +42,28 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
-/* Nav cluster */
+
+/* left-hand HRMs */
+ZMK_BEHAVIOR(hltl, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;         // requires PR #1387
+    bindings = <&mo>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R THUMBS>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
+
+/* right-hand HRMs */
+ZMK_BEHAVIOR(hltr, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;         // requires PR #1387
+    bindings = <&mo>, <&kp>;
+    hold-trigger-key-positions = <KEYS_L THUMBS>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
 
 // long-tap action on hold, short-tap action on all interrupts
 &mt { 
@@ -60,26 +81,26 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             // -----------------------------------------------------------------------------------------
             // | TAB  |  Q      |  W      |  F       |  P       |  B      |   |  J      |  L       |  Y       |  U      |  ;      |      |
             // | ESC  |  A/GUI  |  R/ALT  |  S/CTRL  |  T/SHFT  |  G/TAB  |   |  M/TAP  |  N/SHFT  |  E/CTRL  |  I/ALF  |  O/GUI  |  '   |
-            // | SHFT |  Z      |  X      |  C       |  D/2     |  V      |   |  K      |  H/2       |  ,       |  .      |  /      | SHFT |
+            // | SHFT |  Z      |  X      |  C       |  D/2     |  V      |   |  K      |  H/2     |  ,       |  .      |  /      | SHFT |
             //                                 | HOME/5 | BKSPC/3 | DEL/1 |   | ENT/1 | SPC/3 | END/5 |
 
             bindings = <
 &kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
 &kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &hml TAB G          &hmr TAB M    &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr LEFT_GUI O  &kp SQT
-&kp LSHFT &kp Z           &kp X           &kp C        &lt 2 D       &kp V               &kp K         &lt 2 H            &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
+&kp LSHFT &kp Z           &kp X           &kp C        &hltl 2 D     &kp V               &kp K         &hltr 2 H          &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
                                 &lt 4 HOME       &lt 3 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER   &lt 3 SPACE        &lt 4 END
             >;
         };
 
         nav_layer {
             // -----------------------------------------------------------------------------------------
-            // |  F1    |  F2 |  F3   |  EVAL     |  RENAME    | CTRL    |   | RESZE_WIN | LEFT_WRKSPC | LEFT_WRKSPC | RESZE_WIN |  F11       |  F12 |
+            // |        |     |       |  EVAL     |  RENAME    | CTRL    |   | RESZE_WIN | LEFT_WRKSPC | LEFT_WRKSPC | RESZE_WIN |            |      |
             // |        |     | INS   | GUI(LEFT) | GUI(RIGHT) | SHIFT   |   | LFT       | DWN         |  UP         | RGT       |  GUI(ENT)  |      |
             // |        |     |       | GUI(UP)   | GUI(DOWN)  | LA(INS) |   | WNDWLFT   | WRKSPCLTF   | WRKSPCRHT   | WNDWRHT   |            |      |
             //                                 |     |     |     |         |   |     |     |
 
             bindings = <
-&trans  &trans     &trans         &kp LA(F8)         &kp LS(F6)          &kp LCTRL         &kp LS(RIGHT_ARROW)     &kp LG(HOME)           &kp LG(END)             &kp LS(LEFT_ARROW)      &kp F11        &kp F12
+&trans  &trans     &trans         &kp LA(F8)         &kp LS(F6)          &kp LCTRL         &kp LS(RIGHT_ARROW)    &kp LG(HOME)           &kp LG(END)             &kp LS(LEFT_ARROW)      &trans         &trans
 &trans  &trans     &kp INSERT     &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &kp LSHIFT        &kp LEFT               &kp DOWN               &kp UP                  &kp RIGHT               &kp LG(ENTER)  &trans
 &trans  &trans     &trans         &kp LG(UP_ARROW)   &kp LG(DOWN_ARROW)  &kp LA(INSERT)    &kp LG(LS(LEFT_ARROW)) &kp LG(LC(LEFT_ARROW)) &kp LG(LC(RIGHT_ARROW)) &kp LG(LS(RIGHT_ARROW)) &trans         &trans
                                                   &trans      &trans   &trans              &trans    &trans       &trans
@@ -88,16 +109,16 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
         symbol_layer {
             // -----------------------------------------------------------------------------------------
-            // | CAPS |     |     |  <  |  >  |  "  |   |  \  |  (  |  )  |  -  | "|" |     |
+            // | CAPS |     |  _  | '|' |  `  |  ~  |   |  <  |  (  |  )  |  >  |     |     |
             // |      |  !  |  @  |  #  |  $  |  %  |   |  =  |  {  |  }  |  :  |  ;  |     |
-            // |      |  ~  |  `  |  *  |  &  |  ^  |   |  +  |  [  |  ]  |  _  |     |     |
+            // |      |     |     |  *  |  &  |  ^  |   |  +  |  [  |  ]  |  -  |     |     |
             //                    |     | BKSP | DEL|   | ENT | SPC |     |
 
             bindings = <
-&kp CAPS &trans        &trans        &kp LT        &kp GT         &kp DQT         &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp PIPE   &trans
-&trans   &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR     &kp PRCNT       &kp EQUAL      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &kp SEMI   &trans
-&trans   &kp TILDE     &kp GRAVE     &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDER  &trans     &trans
-                                    &trans        &kp BACKSPACE  &kp DEL         &kp RET        &kp SPACE             &trans
+&kp CAPS &trans        &kp UNDER     &kp PIPE      &kp GRAVE      &kp TILDE       &kp LT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GT     &trans   &trans
+&trans   &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR     &kp PRCNT       &kp EQUAL    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &kp SEMI &trans
+&trans   &trans        &trans        &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &trans   &trans
+                                    &trans        &kp BACKSPACE  &kp DEL         &kp RET       &kp SPACE             &trans
             >;
         };
 
