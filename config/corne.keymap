@@ -79,18 +79,18 @@ ZMK_BEHAVIOR(hltr, hold_tap,
      keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+         default_layer {
             // -----------------------------------------------------------------------------------------
             // | TAB  |  Q      |  W      |  F       |  P       |  B      |   |  J      |  L       |  Y       |  U      |  ;      |      |
             // | ESC  |  A/GUI  |  R/ALT  |  S/CTRL  |  T/SHFT  |  G      |   |  M      |  N/SHFT  |  E/CTRL  |  I/ALF  |  O/GUI  |  '   |
             // | SHFT |  Z      |  X      |  C       |  D       |  V      |   |  K      |  H       |  ,       |  .      |  /      | SHFT |
-            //                                 | HOME | BKSPC/3 | DEL/2 |   | ENT/1 | SPC/2 | END |
+            //                                 | HOME | BKSPC/3 | DEL/1 |   | ENT/1 | SPC/2 | END |
 
             bindings = <
-&kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B         &kp J         &kp L              &kp U            &kp Y              &kp SEMI            &trans
-&kp ESC   &kp A           &kp R           &kp S        &kp T         &kp G         &kp M         &kp N              &kp E            &kp I              &kp O               &kp SQT
-&kp LSHFT &hml LEFT_GUI Z &hml LEFT_ALT X &hml LCTRL C &hml LSHIFT D &kp V         &kp K         &hmr RIGHT_SHIFT H &hmr RCTRL COMMA &hmr RIGHT_ALT DOT &hmr LEFT_GUI FSLH  &kp RSHFT
-                                &kp HOME  &lt 3 BACKSPACE     &lt 2 DELETE         &lt 1 ENTER   &lt 2 SPACE    &kp END
+&kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
+&kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &kp G               &kp M         &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr LEFT_GUI O  &kp SQT
+&kp LSHFT &kp Z           &kp X           &kp C        &kp D         &kp V               &kp K         &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
+                                &kp HOME       &lt 3 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER   &lt 2 SPACE   &kp END
             >;
         };
 
@@ -126,9 +126,9 @@ ZMK_BEHAVIOR(hltr, hold_tap,
 
 number_layer {
             // -----------------------------------------------------------------------------------------
-            // |      |  F1 |  F2 |  F3 | F4  | F5  |       | NEXT    |  7  |  8  |  9  |        |     |
-            // |      | F10 |  F9 |  F8 | F7  | F6  |       | PLY/PSE |  4  |  5  |  6  | VDWN   |     |
-            // |      |     |     |     | F12 | F11 |       | PREV    |  1  |  2  |  3  |  VUP   |     |
+            // |       |  F1 |  F2 |  F3 | F4  | F5  |       | NEXT    |  7  |  8  |  9  |        | TOG_5 |
+            // |       | F10 |  F9 |  F8 | F7  | F6  |       | PLY/PSE |  4  |  5  |  6  | VDWN   |       |
+            // | TOG_4 |     |     |     | F12 | F11 |       | PREV    |  1  |  2  |  3  |  VUP   |       |
             //                    |     |     |     |       | BKSP    |  0  |     |
 
             bindings = <
@@ -141,7 +141,7 @@ number_layer {
 
 gaming_layer {
             // -----------------------------------------------------------------------------------------
-            // |  ESC  |  T |  Q |  W | E  | R  |       | J |  L  |  U  |  Y  |    |  TOG_LYR   |
+            // |  ESC  |  T |  Q |  W | E  | R  |       | J |  L  |  U  |  Y  |    |  TOG_4   |
             // |  TAB  |  G |  A |  S | D  | F  |       | M |  N  |  P  |  I  | O  |     |
             // |  SHFT |  Z |  X |  V | C  | B  |       | K |  H  |  ,  |  .  | /  |     |
             //       |  ALT  |  SHFT  |  SPC  |       | ESC |    |     |
