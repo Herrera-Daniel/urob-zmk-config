@@ -104,7 +104,7 @@ ZMK_BEHAVIOR(hltr, hold_tap,
             bindings = <
 &trans  &trans        &trans        &trans        &trans        &trans           &trans  &trans        &trans        &trans    &trans   &trans 
 &trans  &kp LGUI      &kp LALT      &kp RCTRL     &kp LSHIFT    &trans           &trans  &kp RSHIFT    &kp RCTRL     &kp RALT  &kp LGUI &trans  
-&trans  &trans        &trans        &trans        &kp C(A)      &trans           &trans  &trans        &trans        &trans    &trans   &trans  
+&trans  &trans        &trans        &trans        &kp C(KC_A)      &trans           &trans  &trans        &trans        &trans    &trans   &trans  
                                                   &trans      &trans   &trans              &trans    &trans       &trans
             >;
         };
@@ -165,7 +165,7 @@ gaming_layer {
 &kp ESC      &kp T   &kp Q   &kp W  &kp E   &kp R          &kp J  &kp L  &kp U      &kp Y    &trans   &tog 5
 &kp TAB      &kp G   &kp A   &kp S  &kp D   &kp F          &kp M  &kp N  &kp P      &kp I    &kp O    &trans
 &kp LSHIFT   &kp Z   &kp X   &kp V  &kp C   &kp B          &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH &trans
-              &mt LALT LCTRL   &kp LSHIFT    &kp SPACE         &mo 3   &trans  &trans
+              &mt LALT LCTRL   &kp LSHIFT    &kp SPACE         &mo 4   &trans  &trans
             >;
         };
 
