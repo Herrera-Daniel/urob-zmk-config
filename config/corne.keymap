@@ -90,7 +90,7 @@ ZMK_BEHAVIOR(hltr, hold_tap,
 &kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
 &kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &kp G               &kp M         &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr LEFT_GUI O  &kp SQT
 &kp LSHFT &kp Z           &kp X           &kp C        &kp D         &kp V               &kp K         &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
-                                &lt 4 HOME       &lt 3 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER   &lt 2 SPACE        &lt 4 END
+                                &lt 4 HOME       &lt 3 BACKSPACE     &lt 2 DELETE        &lt 1 ENTER   &lt 2 SPACE        &lt 4 END
             >;
         };
 
@@ -129,13 +129,13 @@ number_layer {
             // |      |  F1 |  F2 |  F3 | F4  | F5  |       | NEXT    |  7  |  8  |  9  |        |     |
             // |      | F10 |  F9 |  F8 | F7  | F6  |       | PLY/PSE |  4  |  5  |  6  | VDWN   |     |
             // |      |     |     |     | F12 | F11 |       | PREV    |  1  |  2  |  3  |  VUP   |     |
-            //                          |     |     |       |    | BKSP |  0  |     |
+            //                    |     |     |     |       | BKSP    |  0  |     |
 
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3      &kp F4    &kp F5           &kp C_NEXT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
 &trans      &kp F10       &kp F9        &kp F8      &kp F7    &kp F6           &kp C_PLAY_PAUSE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOLUME_UP  &trans
 &tog 4      &trans        &trans        &trans      &kp F12   &kp F11          &kp C_PREV  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_VOLUME_DOWN  &trans
-                                    &trans        &trans        &trans         &kp BACKSPACE   &trans  &trans
+                                    &trans        &trans        &trans         &trans   &kp NUMBER_0  &trans
             >;
         };
 
