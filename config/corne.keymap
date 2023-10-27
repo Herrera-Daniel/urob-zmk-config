@@ -117,7 +117,7 @@ ZMK_BEHAVIOR(hltr, hold_tap,
             //                                 |     |     |     |         |   |     |     |
 
             bindings = <
-&trans  &trans     &trans         &trans             &trans              &trans            &trans                 &trans                 &kp LG(END)             &kp LS(LEFT_ARROW)      &trans         &tog 6
+&trans  &trans     &trans         &trans             &trans              &trans            &trans                 &kp LG(KC_HOME)        &kp LG(KC_END)          &kp LS(LEFT_ARROW)      &trans         &tog 6
 &trans  &trans     &kp INSERT     &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &kp LSHIFT        &kp LEFT               &kp DOWN               &kp UP                  &kp RIGHT               &kp LG(ENTER)  &trans
 &trans  &trans     &trans         &kp LG(UP_ARROW)   &kp LG(DOWN_ARROW)  &kp LA(INSERT)    &kp LG(LS(LEFT_ARROW)) &kp LG(LC(LEFT_ARROW)) &kp LG(LC(RIGHT_ARROW)) &kp LG(LS(RIGHT_ARROW)) &trans         &trans
                                                   &trans      &trans   &trans              &trans    &trans       &trans
