@@ -85,13 +85,13 @@ ZMK_BEHAVIOR(hltr, hold_tap,
             // | TAB  |  Q      |  W      |  F       |  P       |  B      |   |  J      |  L       |  Y       |  U      |  ;      |      |
             // | ESC  |  A/GUI  |  R/ALT  |  S/CTRL  |  T/SHFT  |  G      |   |  M      |  N/SHFT  |  E/CTRL  |  I/ALF  |  O/GUI  |  '   |
             // | SHFT |  Z      |  X      |  C       |  D       |  V      |   |  K      |  H       |  ,       |  .      |  /      | SHFT |
-            //                                 | HOME | DEL/1 | BKSPC/3 |   | SPC/2 | ENT/1 | END |
+            //                                 | HOME | BKSPC/3 | DEL/1 |   | ENT/1 | SPC/2 | END |
 
             bindings = <
 &kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
 &kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &kp G               &kp M         &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr LEFT_GUI O  &kp SQT
 &kp LSHFT &kp Z           &kp X           &kp C        &kp D         &kp V               &kp K         &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
-                                &kp HOME       &lt 1 DELETE   &lt 3 BACKSPACE        &lt 2 SPACE   &lt 1 ENTER   &kp END
+                                &kp HOME       &lt 3 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER   &lt 2 SPACE   &kp END
             >;
         };
 
