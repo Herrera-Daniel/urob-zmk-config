@@ -11,11 +11,11 @@
 #define QUICK_TAP_MS 175
 #define LT_TAPPING_TERM_MS 175
 #define TAPPING_TERM_MS 280
-#define REQUIRE_PRIOR_IDLE_MS 190
+#define REQUIRE_PRIOR_IDLE_MS 195
 
 &lt {  // layer-tap config
     flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_MS>;
+    tapping-term-ms = <LT_TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
@@ -49,7 +49,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hltl, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <LT_TAPPING_TERM_MS>;
+    tapping-term-ms = <TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;                
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
     bindings = <&mo>, <&kp>;
@@ -60,7 +60,7 @@ ZMK_BEHAVIOR(hltl, hold_tap,
 /* right-hand HRMs */
 ZMK_BEHAVIOR(hltr, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <LT_TAPPING_TERM_MS>;
+    tapping-term-ms = <TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;                
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
     bindings = <&mo>, <&kp>;
