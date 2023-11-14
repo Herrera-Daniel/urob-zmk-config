@@ -28,7 +28,7 @@
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;                
+    quick-tap-ms = <225>;                
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;         
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R>;
@@ -63,13 +63,13 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             // | TAB  |  Q      |  W      |  F       |  P       |  B      |   |  J      |  L       |  Y       |  U      |  ;      |      |
             // | ESC  |  A/GUI  |  R/ALT  |  S/CTRL  |  T/SHFT  |  G      |   |  M      |  N/SHFT  |  E/CTRL  |  I/ALF  |  O/GUI  |  '   |
             // | SHFT |  Z      |  X      |  C       |  D       |  V      |   |  K      |  H       |  ,       |  .      |  /      | SHFT |
-            //                                 | HOME/4 | SPC/2 | BCKSPC/3 |   | DEL/1 | ENT/2 | END |
+            //                                 | HOME/4 | SPC/2 | ENT/3 |   | DEL/1 | BCKSPC/2 | END |
 
             bindings = <
 &kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
 &kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &kp G               &kp M         &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr LEFT_GUI O  &kp SQT
 &kp LSHFT &kp Z           &kp X           &kp C        &kp D         &kp V               &kp K         &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
-                                &lt 4 HOME       &lt 2 SPACE     &lt 3 BACKSPACE        &lt 1 DELETE   &lt 2 ENTER   &kp END
+                                &lt 4 HOME       &lt 2 SPACE     &lt 3 ENTER        &lt 1 DELETE   &lt 2 BACKSPACE   &kp END
             >;
         };
 
