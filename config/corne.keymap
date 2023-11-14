@@ -98,7 +98,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             bindings = <
 &kp CAPS &trans        &trans        &kp PIPE      &kp GRAVE      &kp TILDE       &kp PLUS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COLON   &trans   &trans
 &trans   &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR     &kp PRCNT       &kp LT    &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS      &kp EQUAL  &kp GT &trans
-&trans   &trans        &trans        &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &kpBSLH   &trans
+&trans   &trans        &trans        &kp ASTRK     &kp AMPERSAND  &kp CARET       &kp PLUS     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &kp BSLH   &trans
                                     &trans      &trans   &trans              &trans    &trans       &trans
             >;
         };
