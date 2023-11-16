@@ -10,8 +10,8 @@
 #include "../zmk-nodefree-config/helper.h"
 #define LT_TAPPING_TERM_MS 175
 #define QUICK_TAP_MS 175
-#define TAPPING_TERM_MS 300
-#define REQUIRE_PRIOR_IDLE_MS 150
+#define TAPPING_TERM_MS 250
+#define REQUIRE_PRIOR_IDLE_MS 185
 
 &lt {  // layer-tap config
     flavor = "balanced";
