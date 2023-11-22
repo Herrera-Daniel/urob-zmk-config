@@ -22,8 +22,10 @@
 #define HRC_HASH &hmr LS(LCTRL) HASH
 #define HRC_AT  &hmr LA(LCTRL) AT_SIGN
 
-/* Horizontal combos - left hand */
+/* Vertical combos - left hand */
 ZMK_COMBO(pipe,   &kp PIPE,       LB0 LM0, 0, COMBO_TERM_FAST)
+
+/* Horizontal combos - left hand */
 ZMK_COMBO(grave,   &kp GRAVE,       LT2 LT1, 0, COMBO_TERM_FAST)
 ZMK_COMBO(tilde,   &kp TILDE,       LT1 LT0, 0, COMBO_TERM_FAST)
 ZMK_COMBO(excl,   HRC_EXCL,       LM4 LM3, 0, COMBO_TERM_FAST)
