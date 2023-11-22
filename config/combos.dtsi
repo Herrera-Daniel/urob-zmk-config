@@ -11,7 +11,7 @@
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 
-#define COMBO_TERM_FAST 30
+#define COMBO_TERM_FAST 35
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 
@@ -24,6 +24,7 @@
 
 /* Vertical combos - left hand */
 ZMK_COMBO(pipe,   &kp PIPE,       LB0 LM0, 0, COMBO_TERM_FAST)
+ZMK_COMBO(tab,   &kp TAB,       LT0 LM0, 0, COMBO_TERM_FAST)
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(grave,   &kp GRAVE,       LT2 LT1, 0, COMBO_TERM_FAST)
@@ -32,11 +33,13 @@ ZMK_COMBO(excl,   HRC_EXCL,       LM4 LM3, 0, COMBO_TERM_FAST)
 ZMK_COMBO(at,   HRC_AT,       LM3 LM2, 0, COMBO_TERM_FAST)
 ZMK_COMBO(hash,   HRC_HASH,       LM2 LM1, 0, COMBO_TERM_FAST)
 ZMK_COMBO(dollar,   &kp DOLLAR,       LM1 LM0, 0, COMBO_TERM_FAST)
-ZMK_COMBO(percent,   &kp PRCNT,       LM1 LM4, 0, COMBO_TERM_FAST)
-ZMK_COMBO(caret,   &kp CARET,       LM1 LM3, 0, COMBO_TERM_FAST)
-ZMK_COMBO(ampersand,   &kp AMPERSAND,       LB2 LB1, 0, COMBO_TERM_FAST)
-ZMK_COMBO(astersk,   &kp ASTRK,       LB2 LB3, 0, COMBO_TERM_FAST)
+ZMK_COMBO(percent,   &kp PRCNT,       LB0 LB1, 0, COMBO_TERM_FAST)
+ZMK_COMBO(caret,   &kp CARET,       LB1 LB2, 0, COMBO_TERM_FAST)
+ZMK_COMBO(ampersand,   &kp AMPERSAND,       LB2 LB3, 0, COMBO_TERM_FAST)
+ZMK_COMBO(astersk,   &kp ASTRK,       LB3 LB4, 0, COMBO_TERM_FAST)
 ZMK_COMBO(caps,   &kp CAPS,       LT4 LT3, 0, COMBO_TERM_FAST)
+ZMK_COMBO(copy,   &kp LC(C),       LM1 LM3, 0, COMBO_TERM_FAST)
+ZMK_COMBO(paste,   &kp LC(V),       LM1 LM4, 0, COMBO_TERM_FAST)
 
 /* Horizontal combos - right hand */
 ZMK_COMBO(plus,   &kp PLUS,       RT0 RT1, 0, COMBO_TERM_FAST)
