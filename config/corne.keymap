@@ -10,8 +10,8 @@
 #include "../zmk-nodefree-config/helper.h"
 #define LT_TAPPING_TERM_MS 175
 #define QUICK_TAP_MS 175
-#define TAPPING_TERM_MS 250
-#define REQUIRE_PRIOR_IDLE_MS 185
+#define TAPPING_TERM_MS 280
+#define REQUIRE_PRIOR_IDLE_MS 210
 
 &lt {  // layer-tap config
     flavor = "balanced";
@@ -32,7 +32,7 @@ ZMK_BEHAVIOR(hml, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;                 
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;         
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <KEYS_R>;
+    hold-trigger-key-positions = <KEYS_R THUMBS_R>;
     hold-trigger-on-release;             
 )
 
@@ -43,7 +43,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;                
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <KEYS_L>;
+    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
     hold-trigger-on-release;             
 )
 
