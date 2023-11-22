@@ -25,6 +25,8 @@
 #define THUMBS_L LH2 LH1 LH0 
 #define THUMBS_R RH0 RH1 RH2
 
+#include "combos.dtsi"
+
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
