@@ -49,12 +49,11 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;             
 )
 
-// long-tap action on hold, short-tap action on all interrupts
+
 &mt { 
-    flavor = "hold-preferred"; \
-    tapping-term-ms = <LT_TAPPING_TERM_MS>; \
-    quick-tap-ms = <175>; \
-    hold-trigger-key-positions = <0>;
+    flavor = "hold-preferred"; 
+    tapping-term-ms = <LT_TAPPING_TERM_MS>; 
+    quick-tap-ms = <175>; 
 };
 
 / {
