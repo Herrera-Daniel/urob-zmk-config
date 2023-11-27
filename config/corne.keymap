@@ -52,8 +52,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 // long-tap action on hold, short-tap action on all interrupts
 &mt { 
     flavor = "tap-preferred"; \
-    tapping-term-ms = <220>; \
-    quick-tap-ms = <220>; \
+    tapping-term-ms = <LT_TAPPING_TERM_MS>; \
+    quick-tap-ms = <175>; \
     hold-trigger-key-positions = <0>;
 };
 
@@ -63,16 +63,16 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
          default_layer {
             // -----------------------------------------------------------------------------------------
-            // | TAB  |  Q      |  W      |  F       |  P       |  B      |   |  J      |  L       |  Y       |  U      |  ;      |      |
-            // | ESC  |  A/GUI  |  R/ALT  |  S/CTRL  |  T/SHFT  |  G      |   |  M      |  N/SHFT  |  E/CTRL  |  I/ALF  |  O/GUI  |  '   |
-            // | SHFT |  Z      |  X      |  C       |  D       |  V      |   |  K      |  H       |  ,       |  .      |  /      | SHFT |
-            //                                 | HOME/4 | BCKSPC/3 | DEL/1 |   | ENT/1 | SPC/2 | END |
+            // | TAB  |  Q   |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  ;  |      |
+            // | ESC  |  A   |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
+            // | SHFT |  Z   |  X  |  C  |  D   |  V |   |  K  |  H  |  ,/CTRL   |  ./ALF   |  '/'/GUI  | SHFT |
+            //           | HOME/4 | BCKSPC/3 | DEL/1 |   | ENT/1 | SPC/2 | END |
 
             bindings = <
-&kp TAB   &kp Q           &kp W           &kp F        &kp P         &kp B               &kp J         &kp L              &kp U        &kp Y            &kp SEMI         &trans
-&kp ESC   &hml LEFT_GUI A &hml LEFT_ALT R &hml LCTRL S &hml LSHIFT T &kp G               &kp M         &hmr RIGHT_SHIFT N &hmr RCTRL E &hmr RIGHT_ALT I &hmr LEFT_GUI O  &kp SQT
-&kp LSHFT &kp Z           &kp X           &kp C        &kp D         &kp V               &kp K         &kp H              &kp COMMA    &kp DOT          &kp FSLH         &kp RSHFT
-                                &lt 4 HOME     &lt 3 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER  &lt 3 SPACE   &kp END
+&kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &kp SEMI  &trans
+&kp ESC   &kp A &kp R &kp S &kp T &kp G               &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
+&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &hmr LCTRL COMMA &hmr LALT DOT &hmr LGUI FSLH  &kp RSHFT
+                                &lt 4 HOME     &mt LSHIFT BACKSPACE     &lt 3 DELETE        &lt 1 ENTER  &mt LSHIFT SPACE   &mt LCTRL END
             >;
         };
 
