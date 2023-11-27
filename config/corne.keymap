@@ -56,6 +56,16 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     quick-tap-ms = <175>; 
 };
 
+ZMK_BEHAVIOR(comma_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp COMMA>, <&kp SEMI>;
+)
+
+ZMK_BEHAVIOR(dot_morph, dot_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp DOT>, <&kp COLON>;
+)
+
 / {
      keymap {
         compatible = "zmk,keymap";
@@ -70,7 +80,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             bindings = <
 &kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &kp SEMI  &trans
 &kp ESC   &kp A &kp R &kp S &kp T &kp G               &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
-&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &hmr LCTRL COMMA &hmr LALT DOT &hmr LGUI FSLH  &kp RSHFT
+&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &mt LCTRL comma_morph &mt LALT dot_morph &mt LGUI FSLH  &kp RSHFT
                                 &lt 4 HOME     &mt LSHIFT BACKSPACE     &lt 3 DELETE        &lt 1 ENTER  &mt LSHIFT SPACE   &mt LCTRL END
             >;
         };
