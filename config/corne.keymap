@@ -11,7 +11,7 @@
 #define LT_TAPPING_TERM_MS 175
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 280
-#define REQUIRE_PRIOR_IDLE_MS 210
+#define REQUIRE_PRIOR_IDLE_MS 150
 
 &lt {  // layer-tap config
     flavor = "balanced";
@@ -51,7 +51,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 // long-tap action on hold, short-tap action on all interrupts
 &mt { 
-    flavor = "tap-preferred"; \
+    flavor = "hold-preferred"; \
     tapping-term-ms = <LT_TAPPING_TERM_MS>; \
     quick-tap-ms = <175>; \
     hold-trigger-key-positions = <0>;
