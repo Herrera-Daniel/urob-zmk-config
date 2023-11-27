@@ -65,8 +65,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             // -----------------------------------------------------------------------------------------
             // | TAB  |  Q   |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  ;  |      |
             // | ESC  |  A   |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
-            // | SHFT |  Z   |  X  |  C  |  D   |  V |   |  K  |  H  |  ,/CTRL   |  ./ALF   |  '/'/GUI  | SHFT |
-            //           | HOME/4 | BCKSPC/3 | DEL/1 |   | ENT/1 | SPC/2 | END |
+            // | SHFT |  Z   |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,/CTRL   |  ./ALT   |  '/'/GUI  | SHFT |
+            //       | HOME/4 | BCKSPC/SHIFT | DEL/3 |   | ENT/1 | SPC/SHIFT | END |
 
             bindings = <
 &kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &kp SEMI  &trans
