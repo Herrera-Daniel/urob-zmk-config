@@ -64,7 +64,7 @@ ZMK_BEHAVIOR(comma_mod, hold_tap,
     tapping-term-ms = <180>;
     quick-tap-ms = <QUICK_TAP_MS>;                
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
-    bindings = <&kp CTRL>, <&comma_morph>;
+    bindings = <&kp>, <&comma_morph>;
     hold-trigger-key-positions = <KEYS_L THUMBS_L>;
     hold-trigger-on-release;             
 )
@@ -74,7 +74,7 @@ ZMK_BEHAVIOR(dot_mod, hold_tap,
     tapping-term-ms = <180>;
     quick-tap-ms = <QUICK_TAP_MS>;                
     require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
-    bindings = <&kp LALT>, <&comma_morph>;
+    bindings = <&kp>, <&dot_morph>;
     hold-trigger-key-positions = <KEYS_L THUMBS_L>;
     hold-trigger-on-release;             
 )
@@ -100,7 +100,7 @@ ZMK_BEHAVIOR(dot_mod, hold_tap,
             bindings = <
 &kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &kp SEMI  &trans
 &kp ESC   &kp A &kp R &kp S &kp T &kp G               &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
-&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &comma_mod &dot_mod &mt LGUI FSLH  &kp RSHFT
+&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &comma_mod LCTRL &dot_mod LALT &mt LGUI FSLH  &kp RSHFT
                                 &lt 4 HOME     &mt LSHIFT BACKSPACE     &lt 3 DELETE        &lt 1 ENTER  &mt LSHIFT SPACE   &mt LCTRL END
             >;
         };
