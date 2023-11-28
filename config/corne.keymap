@@ -37,6 +37,26 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
     bindings = <&kp DOT>, <&kp COLON>;
 )
 
+ZMK_BEHAVIOR(par_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp RPAR>, <&kp LPAR>;
+)
+
+ZMK_BEHAVIOR(brace_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp RBRC>, <&kp LBRC>;
+)
+
+ZMK_BEHAVIOR(bracket_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp RBKT>, <&kp LBKT>;
+)
+
+ZMK_BEHAVIOR(gt_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp LT>, <&kp GT>;
+)
+
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
