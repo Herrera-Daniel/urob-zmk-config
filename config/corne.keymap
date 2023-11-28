@@ -98,7 +98,7 @@ ZMK_BEHAVIOR(dot_mod, hold_tap,
             //       | HOME/4 | BCKSPC/SHIFT | DEL/3 |   | ENT/1 | SPC/SHIFT | END |
 
             bindings = <
-&kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &kp LALT  &LGUI
+&kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &kp LALT  &kp LGUI
 &kp ESC   &kp A &kp R &kp S &kp T &kp G               &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
 &kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &comma_morph &dot_morph &kp FSLH  &kp RSHFT
                                 &lt 4 HOME     &mt LSHIFT BACKSPACE     &lt 3 DELETE        &lt 1 ENTER  &mt LSHIFT SPACE   &mt LCTRL END
