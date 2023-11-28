@@ -59,27 +59,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;             
 )
 
-ZMK_BEHAVIOR(comma_mod, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <180>;
-    quick-tap-ms = <QUICK_TAP_MS>;                
-    require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
-    bindings = <&kp LCTRL>, <&comma_morph>;
-    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-    hold-trigger-on-release;             
-)
-
-ZMK_BEHAVIOR(dot_mod, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <180>;
-    quick-tap-ms = <QUICK_TAP_MS>;                
-    require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
-    bindings = <&kp LALT>, <&dot_morph>;
-    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-    hold-trigger-on-release;             
-)
-
-
 &mt { 
     flavor = "tap-preferred"; 
     tapping-term-ms = <LT_TAPPING_TERM_MS>; 
