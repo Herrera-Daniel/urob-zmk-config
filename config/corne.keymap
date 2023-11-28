@@ -67,6 +67,16 @@ ZMK_BEHAVIOR(equal_morph, mod_morph,
     bindings = <&kp EQUAL>, <&kp GT>;
 )
 
+ZMK_BEHAVIOR(up_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp UP>, <&kp DOWN>;
+)
+
+ZMK_BEHAVIOR(left_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp LEFT>, <&kp RIGHT>;
+)
+
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
