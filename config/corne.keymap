@@ -27,6 +27,16 @@
 
 #include "combos.dtsi"
 
+ZMK_BEHAVIOR(comma_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp COMMA>, <&kp SEMI>;
+)
+
+ZMK_BEHAVIOR(dot_morph, dot_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp DOT>, <&kp COLON>;
+)
+
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
@@ -49,22 +59,32 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;             
 )
 
+ZMK_BEHAVIOR(comma_mod, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <180>;
+    quick-tap-ms = <QUICK_TAP_MS>;                
+    require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
+    bindings = <&kp>, <&comma_morph>;
+    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+    hold-trigger-on-release;             
+)
+
+ZMK_BEHAVIOR(dot_mod, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <180>;
+    quick-tap-ms = <QUICK_TAP_MS>;                
+    require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
+    bindings = <&kp>, <&comma_morph>;
+    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+    hold-trigger-on-release;             
+)
+
 
 &mt { 
     flavor = "hold-preferred"; 
     tapping-term-ms = <LT_TAPPING_TERM_MS>; 
     quick-tap-ms = <175>; 
 };
-
-ZMK_BEHAVIOR(comma_morph, mod_morph,
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp COMMA>, <&kp SEMI>;
-)
-
-ZMK_BEHAVIOR(dot_morph, dot_morph,
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp DOT>, <&kp COLON>;
-)
 
 / {
      keymap {
@@ -80,7 +100,7 @@ ZMK_BEHAVIOR(dot_morph, dot_morph,
             bindings = <
 &kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &kp SEMI  &trans
 &kp ESC   &kp A &kp R &kp S &kp T &kp G               &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
-&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &mt LCTRL comma_morph &mt LALT dot_morph &mt LGUI FSLH  &kp RSHFT
+&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &comma_mod LCTRL &dot_mod LALT &mt LGUI FSLH  &kp RSHFT
                                 &lt 4 HOME     &mt LSHIFT BACKSPACE     &lt 3 DELETE        &lt 1 ENTER  &mt LSHIFT SPACE   &mt LCTRL END
             >;
         };
