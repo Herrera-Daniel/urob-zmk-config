@@ -140,7 +140,7 @@ ZMK_BEHAVIOR(dot_mod, hold_tap,
 &kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &minus_morph  &equal_morph
 &kp ESC   &kp A &kp R &kp S &kp T &kp G               &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
 &kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &comma_mod LCTRL 0 &dot_mod LALT 0 &mt LGUI FSLH  &kp RSHFT
-                                &lt 4 HOME     &lt 3 BACKSPACE     &mt LSHIFT DELETE        &mt LSHIFT ENTER  &lt 1 SPACE   &mt LCTRL END
+                                &lt 4 HOME     &lt 3 BACKSPACE     &lt 1 DELETE        &mt LSHIFT ENTER  &kp SPACE   &mt LCTRL END
             >;
         };
 
