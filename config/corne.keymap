@@ -32,7 +32,7 @@ ZMK_BEHAVIOR(comma_morph, mod_morph,
     bindings = <&kp COMMA>, <&kp SEMI>;
 )
 
-ZMK_BEHAVIOR(dot_morph, dot_morph,
+ZMK_BEHAVIOR(dot_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp DOT>, <&kp COLON>;
 )
