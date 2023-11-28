@@ -39,17 +39,17 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
 
 ZMK_BEHAVIOR(par_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp RPAR>, <&kp LPAR>;
+    bindings = <&kp LPAR>, <&kp RPAR>;
 )
 
 ZMK_BEHAVIOR(brace_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp RBRC>, <&kp LBRC>;
+    bindings = <&kp LBRC>, <&kp RBRC>;
 )
 
 ZMK_BEHAVIOR(bracket_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp RBKT>, <&kp LBKT>;
+    bindings = <&kp LBKT>, <&kp RBKT>;
 )
 
 ZMK_BEHAVIOR(gt_morph, mod_morph,
