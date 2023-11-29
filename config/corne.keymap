@@ -77,6 +77,16 @@ ZMK_BEHAVIOR(left_morph, mod_morph,
     bindings = <&kp LEFT>, <&kp RIGHT>;
 )
 
+ZMK_BEHAVIOR(bkspc_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp BACKSPACE>, <&kp DEL>;
+)
+
+ZMK_BEHAVIOR(home_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp HOME>, <&kp END>;
+)
+
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
@@ -119,6 +129,26 @@ ZMK_BEHAVIOR(dot_mod, hold_tap,
     hold-trigger-on-release;             
 )
 
+ZMK_BEHAVIOR(bkspc_mod, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;                
+    require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
+    bindings = <&kp>, <&bkspc_morph>;
+    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+    hold-trigger-on-release;             
+)
+
+ZMK_BEHAVIOR(home_mod, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;                
+    require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; 
+    bindings = <&mo>, <&home_morph>;
+    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+    hold-trigger-on-release;             
+)
+
 &mt { 
     flavor = "tap-preferred"; 
     tapping-term-ms = <200>; 
@@ -131,16 +161,16 @@ ZMK_BEHAVIOR(dot_mod, hold_tap,
 
          default_layer {
             // -----------------------------------------------------------------------------------------
-            // | TAB  |  Q   |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  ;  |      |
+            // | TAB  |  Q   |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  -/+  |  =/> |
             // | ESC  |  A   |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
             // | SHFT |  Z   |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,/CTRL   |  ./ALT   |  '/'/GUI  | SHFT |
-            //       | HOME/4 | BCKSPC/SHIFT | DEL/3 |   | ENT/1 | SPC/SHIFT | END |
+            //       | HOME/4 | BCKSPC/DEL/SHIFT | TAB/3 |   | HOME/END/1 | SPC/SHIFT | END |
 
             bindings = <
-&kp TAB   &kp Q &kp W &kp F &kp P &kp B               &kp J  &kp L &kp U     &kp Y   &minus_morph  &equal_morph
-&kp ESC   &kp A &kp R &kp S &kp T &kp G               &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
-&kp LSHFT &kp Z &kp X &kp C &kp D &kp V               &kp K  &kp H &comma_mod LCTRL 0 &dot_mod LALT 0 &mt LGUI FSLH  &kp RSHFT
-                                &lt 4 HOME     &lt 3 BACKSPACE     &lt 1 DELETE        &lt 1 ENTER  &mt LSHIFT SPACE   &mt LCTRL END
+            &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J  &kp L &kp U     &kp Y   &minus_morph  &equal_morph
+            &kp ESC   &kp A &kp R &kp S &kp T &kp G        &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
+            &kp LSHFT &kp Z &kp X &kp C &kp D &kp V        &kp K  &kp H &comma_mod LCTRL 0 &dot_mod LALT 0 &mt LGUI FSLH  &kp RSHFT
+        &lt 4 INS   &bkspc_mod LSHIFT 0  &lt 3 TAB        &home_morph 1  &mt LSHIFT SPACE   &lt 4 K_APP
             >;
         };
 
