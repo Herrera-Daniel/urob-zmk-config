@@ -90,6 +90,16 @@ ZMK_BEHAVIOR(enter_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp ENTER>, <&kp LC(ENTER)>;
 )
+
+ZMK_BEHAVIOR(slash_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp FSLH>, <&kp BSLH>;
+)
+
+ZMK_BEHAVIOR(ques_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp QMARK>, <&kp EXCL>;
+)
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
