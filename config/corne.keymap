@@ -189,7 +189,7 @@ ZMK_BEHAVIOR(enter_mod, hold_tap,
             bindings = <
 &trans  &trans     &trans         &kp LA(F8)         &kp LS(F6)          &kp LA(INSERT)         &kp LS(RIGHT_ARROW)    &kp LG(HOME)           &kp LG(END)             &kp LS(LEFT_ARROW)      &kp PG_UP         &trans
 &trans  &trans     &kp INSERT     &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &kp LC(C)        &kp LEFT               &kp DOWN               &kp UP                  &kp RIGHT               &kp LG(ENTER)  &trans
-&trans  &trans     &trans         &kp LG(UP_ARROW)   &kp LG(DOWN_ARROW)  &kp LC(LS(V))    &kp LG(LS(LEFT_ARROW)) &kp LG(LC(LEFT_ARROW)) &kp LG(LC(RIGHT_ARROW)) &kp LG(LS(RIGHT_ARROW)) &kp PG_DN         &trans
+&trans  &trans     &trans         &kp LG(UP_ARROW)   &kp LG(DOWN_ARROW)  &kp LC(V)    &kp LG(LS(LEFT_ARROW)) &kp LG(LC(LEFT_ARROW)) &kp LG(LC(RIGHT_ARROW)) &kp LG(LS(RIGHT_ARROW)) &kp PG_DN         &trans
                                                   &trans      &trans   &trans              &trans    &trans       &trans
             >;
         };
@@ -218,8 +218,8 @@ number_layer {
 
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3      &kp F4    &kp F5           &kp ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp FSLH  &trans
-&trans      &kp F10       &kp F9        &kp F8      &kp F7    &kp F6           &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &trans
-&tog 5      &trans        &trans        &trans      &kp F12   &kp F11          &kp PLUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp HASH  &trans
+&trans      &kp F10       &kp F9        &kp F8      &kp F7    &kp LC(C)           &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &trans
+&tog 5      &trans        &trans        &kp F12     &kp F11   &kp LC(V)          &kp PLUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp HASH  &trans
                                     &trans        &trans        &trans         &kp BACKSPACE   &kp NUMBER_0  &trans
             >;
         };
