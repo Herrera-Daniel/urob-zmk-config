@@ -179,6 +179,12 @@ ZMK_BEHAVIOR(ques_mod, hold_tap,
     hold-trigger-on-release;             
 )
 
+&mt { 
+    flavor = "tap-preferred"; 
+    tapping-term-ms = <200>; 
+    quick-tap-ms = <175>; 
+};
+
 / {
      keymap {
         compatible = "zmk,keymap";
