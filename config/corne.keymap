@@ -191,13 +191,13 @@ ZMK_BEHAVIOR(resize_window_right, macro,
     bindings = <&kp LG(ENTER) &kp LS(RIGHT) &kp ESC>;
 )
 
-MK_BEHAVIOR(move_window_left, macro,
+ZMK_BEHAVIOR(move_window_left, macro,
     wait-ms = <1>;
     tap-ms = <2>;
     bindings = <&kp LG(ENTER) &kp LEFT &kp ESC>;
 )
 
-MK_BEHAVIOR(move_window_right, macro,
+ZMK_BEHAVIOR(move_window_right, macro,
     wait-ms = <1>;
     tap-ms = <2>;
     bindings = <&kp LG(ENTER) &kp RIGHT &kp ESC>;
