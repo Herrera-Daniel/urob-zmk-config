@@ -179,7 +179,7 @@ ZMK_BEHAVIOR(ques_mod, hold_tap,
     hold-trigger-on-release;             
 )
 
-ZZMK_BEHAVIOR(resize_window_left, macro,
+ZMK_BEHAVIOR(resize_window_left, macro,
     bindings = <&macro_tap &kp LG(ENTER)>
              , <&macro_tap &kp LS(LEFT)>
              , <&macro_tap &kp ESC>;
@@ -221,13 +221,13 @@ ZMK_BEHAVIOR(win_sleep, macro,
 
          default_layer {
             // -----------------------------------------------------------------------------------------
-            // | TAB  |  Q   |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  -/+  |  =/> |
+            // | GUI  |  Q   |  W  |  F  |  P  |  B  |   |  J  |  L  |  Y  |  U  |  -/+  |  =/> |
             // | ESC  |  A   |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '   |
             // | CTRL |  Z   |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,/CTRL   |  ./ALT   |  '/'/GUI  | SHFT |
             //       | INS/4 | BCKSPC/SHIFT | DEL/TAB/3 |   | ENTER/LC(ENTER)/1 | SPC/SHIFT | MENU/4 |
 
             bindings = <
-            &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J  &kp L &kp U     &kp Y   &minus_morph  &equal_morph
+            &kp LGUI   &kp Q &kp W &kp F &kp P &kp B        &kp J  &kp L &kp U     &kp Y   &minus_morph  &equal_morph
             &kp ESC   &kp A &kp R &kp S &kp T &kp G        &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
             &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K  &kp H &comma_mod LCTRL 0 &dot_mod LALT 0 &ques_mod LGUI 0  &kp RSHFT
         &lt 3 INS   &mt LSHIFT BACKSPACE  &del_mod 2 0        &enter_mod 1 0  &mt LSHIFT SPACE   &lt 3 K_APP
