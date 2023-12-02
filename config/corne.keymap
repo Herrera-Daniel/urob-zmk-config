@@ -182,7 +182,7 @@ ZMK_BEHAVIOR(ques_mod, hold_tap,
 ZMK_BEHAVIOR(resize_window_left, macro,
     wait-ms = <1>;
     tap-ms = <2>;
-    bbindings = <&macro_tap &kp LG(ENTER)>
+    bindings = <&macro_tap &kp LG(ENTER)>
              , <&macro_tap &kp LS(LEFT)>
              , <&macro_tap &kp ESC>;
 )
