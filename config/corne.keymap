@@ -184,7 +184,7 @@ ZMK_BEHAVIOR(resize_window_left, macro,
 )
 
 ZMK_BEHAVIOR(resize_window_right, macro,
-    bindings = <&kp LG(ENTER &kp LS(RIGHT) &kp ESC>;
+    bindings = <&kp LG(ENTER) &kp LS(RIGHT) &kp ESC>;
 )
 
 ZMK_BEHAVIOR(move_window_left, macro,
