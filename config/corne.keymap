@@ -182,25 +182,33 @@ ZMK_BEHAVIOR(ques_mod, hold_tap,
 ZMK_BEHAVIOR(resize_window_left, macro,
     wait-ms = <10>;
     tap-ms = <2>;
-    bindings = <&kp LG(ENTER) &kp LS(LEFT) &kp ESC>;
+    bindings = <&macro_tap &kp LG(ENTER)>
+             , <&macro_tap &kp LS(LEFT)>
+             , <&macro_tap &kp ESC>;
 )
 
 ZMK_BEHAVIOR(resize_window_right, macro,
     wait-ms = <10>;
     tap-ms = <2>;
-    bindings = <&kp LG(ENTER) &kp LS(RIGHT) &kp ESC>;
+    bindings = <&macro_tap &kp LG(ENTER)>
+             , <&macro_tap &kp LS(RIGHT)>
+             , <&macro_tap &kp ESC>;
 )
 
 ZMK_BEHAVIOR(move_window_left, macro,
     wait-ms = <10>;
     tap-ms = <2>;
-    bindings = <&kp LG(ENTER) &kp LEFT &kp ESC>;
+    bindings = <&macro_tap &kp LG(ENTER)>
+             , <&macro_tap &kp LEFT>
+             , <&macro_tap &kp ESC>;
 )
 
 ZMK_BEHAVIOR(move_window_right, macro,
     wait-ms = <10>;
     tap-ms = <2>;
-    bindings = <&kp LG(ENTER) &kp RIGHT &kp ESC>;
+    bindings = <&macro_tap &kp LG(ENTER)>
+             , <&macro_tap &kp RIGHT>
+             , <&macro_tap &kp ESC>;
 )
 
 ZMK_BEHAVIOR(win_sleep, macro,
