@@ -86,9 +86,9 @@ ZMK_BEHAVIOR(home_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp HOME>, <&kp END>;
 )
-ZMK_BEHAVIOR(enter_morph, mod_morph,
+ZMK_BEHAVIOR(amp_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp ENTER>, <&kp LC(ENTER)>;
+    bindings = <&kp AMPERSAND>, <&kp PIPE>;
 )
 
 ZMK_BEHAVIOR(slash_morph, mod_morph,
@@ -161,15 +161,6 @@ ZMK_BEHAVIOR(home_mod, hold_tap,
     hold-trigger-on-release;             
 )
 
-ZMK_BEHAVIOR(enter_mod, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;                
-    bindings = <&mo>, <&enter_morph>;
-    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-    hold-trigger-on-release;             
-)
-
 ZMK_BEHAVIOR(ques_mod, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
@@ -235,7 +226,7 @@ ZMK_BEHAVIOR(win_sleep, macro,
             &kp LGUI   &kp Q &kp W &kp F &kp P &kp B        &kp J  &kp L &kp U     &kp Y   &minus_morph  &equal_morph
             &kp ESC   &kp A &kp R &kp S &kp T &kp G        &kp M  &kp N &kp E     &kp I   &kp O     &kp SQT
             &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K  &kp H &comma_mod LCTRL 0 &dot_mod LALT 0 &ques_mod LGUI 0  &kp RSHFT
-        &lt 3 HOME   &mt LSHIFT BACKSPACE  &del_mod 2 0        &enter_mod 1 0  &mt LSHIFT SPACE   &lt 3 END
+        &lt 3 HOME   &mt LSHIFT BACKSPACE  &del_mod 2 0        &lt 1 ENTER  &mt LSHIFT SPACE   &lt 3 END
             >;
         };
 
