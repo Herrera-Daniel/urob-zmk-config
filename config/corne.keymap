@@ -180,31 +180,35 @@ ZMK_BEHAVIOR(ques_mod, hold_tap,
 )
 
 ZMK_BEHAVIOR(resize_window_left, macro,
-    bindings = <&macro_wait_time 50>
+    bindings = <&macro_wait_time 100>
              , <&macro_tap &kp LG(ENTER)>
+             , <&macro_wait_time 30>
              , <&macro_tap &kp LS(LEFT)>
              , <&macro_tap &kp ENTER>;
 )
 
 ZMK_BEHAVIOR(resize_window_right, macro,
-   bindings = <&macro_wait_time 50>
+   bindings = <&macro_wait_time 100>
              , <&macro_tap &kp LG(ENTER)>
+             , <&macro_wait_time 30>
              , <&macro_tap &kp LS(RIGHT)>
-             , <&macro_tap &kp ESC>;
+             , <&macro_tap &kp ENTER>;
 )
 
 ZMK_BEHAVIOR(move_window_left, macro,
-    bindings = <&macro_wait_time 50>
+    bindings = <&macro_wait_time 100>
              , <&macro_tap &kp LG(ENTER)>
+             , <&macro_wait_time 30>
              , <&macro_tap &kp LEFT>
-             , <&macro_tap &kp ESC>;
+             , <&macro_tap &kp ENTER>;
 )
 
 ZMK_BEHAVIOR(move_window_right, macro,
-   bindings = <&macro_wait_time 50>
+   bindings = <&macro_wait_time 100>
              , <&macro_tap &kp LG(ENTER)>
+             , <&macro_wait_time 30>
              , <&macro_tap &kp RIGHT>
-             , <&macro_tap &kp ESC>;
+             , <&macro_tap &kp ENTER>;
 )
 
 ZMK_BEHAVIOR(win_sleep, macro,
