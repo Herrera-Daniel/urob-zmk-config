@@ -194,12 +194,14 @@ ZMK_BEHAVIOR(resize_window_right, macro,
 
 ZMK_BEHAVIOR(move_window_left, macro,
     bindings = <&macro_tap &kp LG(ENTER)>
+             , <&macro_wait_time 500>
              , <&macro_tap &kp LEFT>
              , <&macro_tap &kp ESC>;
 )
 
 ZMK_BEHAVIOR(move_window_right, macro,
     bindings = <&macro_tap &kp LG(ENTER)>
+             , <&macro_wait_time 500>
              , <&macro_tap &kp RIGHT>
              , <&macro_tap &kp ESC>;
 )
