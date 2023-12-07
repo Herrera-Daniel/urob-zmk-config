@@ -238,9 +238,9 @@ ZMK_BEHAVIOR(win_sleep, macro,
             //                                 |     |     |     |         |   |     |     |
 
             bindings = <
-&trans  &trans       &kp INS         &kp LG(UP_ARROW)   &kp LG(DOWN_ARROW)   &kp LA(INSERT)         &resize_window_left    &kp LA(DOWN)     &kp LA(UP)             &resize_window_right      &kp PG_UP         &trans
+&trans  &trans       &kp INS         &kp LG(UP_ARROW)   &kp LG(DOWN_ARROW)   &kp LA(INSERT)         &resize_window_left    &kp LG(LC(DOWN))     &kp LG(LC(UP))             &resize_window_right      &kp LA(DOWN)         &trans
 &trans  &kp LG(HOME) &kp LA(F8)     &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &kp LC(C)        &kp LEFT               &kp DOWN               &kp UP                  &kp RIGHT               &kp LG(ENTER)  &trans
-&trans  &kp LG(END)  &kp LS(F6)     &move_window_left   &move_window_right  &kp LC(V)    &kp LC(LEFT_ARROW) &kp LG(LC(LEFT_ARROW)) &kp LG(LC(RIGHT_ARROW)) &kp LC(RIGHT_ARROW) &kp PG_DN         &trans
+&trans  &kp LG(END)  &kp LS(F6)     &move_window_left   &move_window_right  &kp LC(V)    &kp LC(LEFT_ARROW) &kp LG(LC(LEFT_ARROW)) &kp LG(LC(RIGHT_ARROW)) &kp LC(RIGHT_ARROW) &kp LA(UP)         &trans
                                                   &trans      &trans   &trans              &trans    &trans       &trans
             >;
         };
