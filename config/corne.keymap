@@ -283,16 +283,16 @@ gaming_layer {
             //       |  ALT  |  SHFT  |  SPC  |       | ESC |    |     |
 
             bindings = <
-&kp ESC     &kp T   &kp Q   &kp W  &kp E   &kp R          &kp J  &kp L  &kp U      &kp Y    &trans   &tog 5
+&kp ESC     &kp T   &kp Q   &kp W  &kp E   &kp R          &kp J  &kp L  &kp U      &kp Y    &trans   &tog 4
 &kp TAB     &kp G   &kp A   &kp S  &kp D   &kp F          &kp M  &kp N  &kp P      &kp I    &kp O    &trans
 &kp LCTRL   &kp Z   &kp X   &kp V  &kp C   &kp B          &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH &trans
-              &kp LALT   &kp LSHIFT    &kp SPACE         &mo 3   &trans  &trans
+              &kp LALT   &kp LSHIFT    &kp SPACE         &lt 3 ENTER   &trans  &trans
             >;
         };
 
         bt_layer {
             bindings = <
-&bt BT_CLR  &trans        &trans        &trans        &trans        &trans           &trans  &trans        &trans        &trans  &trans  &tog 6
+&bt BT_CLR  &trans        &trans        &trans        &trans        &trans           &trans  &trans        &trans        &trans  &trans  &tog 5
 &trans      &trans        &trans        &trans        &trans        &trans           &trans  &trans        &trans        &trans  &trans  &trans
 &trans      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0     &trans  &trans        &trans        &trans  &trans  &trans
                                     &trans        &trans        &trans           &trans  &trans  &trans
