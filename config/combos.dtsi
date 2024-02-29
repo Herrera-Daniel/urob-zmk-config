@@ -37,3 +37,11 @@ ZMK_COMBO(par,   &par_morph,       RM1 RM2, 0, COMBO_TERM_FAST)
 ZMK_COMBO(minus,   &minus_morph,       RM2 RM3, 0, COMBO_TERM_FAST)
 ZMK_COMBO(under,   &kp UNDER,       RB2 RB3, 0, COMBO_TERM_FAST)
 ZMK_COMBO(bracket,   &bracket_morph,       RB1 RB2, 0, COMBO_TERM_FAST)
+
+/* Gaming Combos */
+ZMK_COMBO(five,   &kp NUMBER_5,       LB1 LB0, 4, COMBO_TERM_FAST)
+ZMK_COMBO(four,   &kp NUMBER_4,       LM1 LM0, 4, COMBO_TERM_FAST)
+ZMK_COMBO(three,   &kp NUMBER_3,       LT1 LT0, 4, COMBO_TERM_FAST)
+ZMK_COMBO(caps2,   &kp CAPS,       LT1 LT2, 4, COMBO_TERM_FAST)
+ZMK_COMBO(one,   &kp NUMBER_1,       LT2 LM2, 4, COMBO_TERM_FAST)
+ZMK_COMBO(two,   &kp NUMBER_2,       LT1 LM1, 4, COMBO_TERM_FAST)
