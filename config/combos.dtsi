@@ -12,6 +12,7 @@
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 
 #define COMBO_TERM_FAST 40
+#define COMBO_TERM_SLOW 80
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 
@@ -39,9 +40,9 @@ ZMK_COMBO(under,   &kp UNDER,       RB2 RB3, 0, COMBO_TERM_FAST)
 ZMK_COMBO(bracket,   &bracket_morph,       RB1 RB2, 0, COMBO_TERM_FAST)
 
 /* Gaming Combos */
-ZMK_COMBO(five,   &kp NUMBER_5,       LB1 LB0, 4, COMBO_TERM_FAST)
-ZMK_COMBO(four,   &kp NUMBER_4,       LM1 LM0, 4, COMBO_TERM_FAST)
-ZMK_COMBO(three,   &kp NUMBER_3,       LT1 LT0, 4, COMBO_TERM_FAST)
-ZMK_COMBO(caps2,   &kp CAPS,       LT1 LT2, 4, COMBO_TERM_FAST)
-ZMK_COMBO(one,   &kp NUMBER_1,       LT2 LM2, 4, COMBO_TERM_FAST)
-ZMK_COMBO(two,   &kp NUMBER_2,       LT1 LM1, 4, COMBO_TERM_FAST)
+ZMK_COMBO(five,   &kp NUMBER_5,       LB1 LB0, 4, COMBO_TERM_SLOW)
+ZMK_COMBO(four,   &kp NUMBER_4,       LT1 LT0, 4, COMBO_TERM_SLOW)
+ZMK_COMBO(three,   &kp NUMBER_3,       LT1 LT2, 4, COMBO_TERM_SLOW)
+ZMK_COMBO(caps2,   &kp CAPS,       LM1 LM0, 4, COMBO_TERM_SLOW)
+ZMK_COMBO(one,   &kp NUMBER_1,       LT2 LM2, 4, COMBO_TERM_SLOW)
+ZMK_COMBO(two,   &kp NUMBER_2,       LT1 LM1, 4, COMBO_TERM_SLOW)
