@@ -170,6 +170,15 @@ ZMK_BEHAVIOR(ques_mod, hold_tap,
     hold-trigger-on-release;             
 )
 
+ZMK_BEHAVIOR(caps_mod, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;                
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+    hold-trigger-on-release;             
+)
+
 ZMK_BEHAVIOR(resize_window_left, macro,
 wait-ms = <100>;
     bindings = <&macro_tap &kp LG(ENTER)>
@@ -286,7 +295,7 @@ gaming_layer {
 &kp ESC     &kp T   &kp Q   &kp W  &kp E   &kp R          &kp J  &kp L  &kp U      &kp Y    &trans   &tog 4
 &kp TAB     &kp G   &kp A   &kp S  &kp D   &kp F          &kp M  &kp N  &kp P      &kp I    &kp O    &trans
 &kp LCTRL   &kp Z   &kp X   &kp V  &kp C   &kp B          &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH &trans
-              &kp LALT   &kp LSHIFT    &kp SPACE         &lt 3 ENTER   &trans  &trans
+              &kp LALT   &kp LSHIFT    &caps_mod CAPS SPACE         &lt 3 ENTER   &trans  &trans
             >;
         };
 
